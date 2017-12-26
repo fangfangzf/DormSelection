@@ -35,12 +35,12 @@ public class Guide extends Activity implements ViewPager.OnPageChangeListener{
         initDots();
         //初始化INTO_BTN，使用views里面的第三个视图即get（2）
         into_btn = (Button)views.get(2).findViewById(R.id.into_btn);
-        into_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Guide.this,MainActivity.class);
-                startActivity(i);
-                finish();
+                into_btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent i = new Intent(Guide.this,MainActivity.class);
+                        startActivity(i);
+                        finish();
             }
         });
     }

@@ -38,6 +38,8 @@ import javax.net.ssl.X509TrustManager;
 import wangwn.Model.Student;
 
 public class MainActivity extends AppCompatActivity {
+    private View mActionBarView;
+    private View mContextView;
     Button login_btn;
     EditText my_stuid,my_password;
     String password;
@@ -69,18 +71,18 @@ public class MainActivity extends AppCompatActivity {
         my_stuid= (EditText) findViewById(R.id.accountEt);
         my_password= (EditText) findViewById(R.id.pwdEt);
 
-
-        login_btn.setOnTouchListener(new View.OnTouchListener() {
+//        看这里
+        mActionBarView = findViewById(android.support.v7.appcompat.R.id.action_bar);
+        mContextView = findViewById(android.support.v7.appcompat.R.id.action_context_bar);
+        mActionBarView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN){
-                    v.setBackgroundColor(Color.rgb(211,121,121));
-                }else if(event.getAction()==MotionEvent.ACTION_UP){
-                    v.setBackgroundColor(Color.rgb(141,238,238));
-                }
-                return false;
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Guide.class);
+                startActivity(intent);
+                finish();
             }
         });
+
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                       @Override
                       public void run() {
                           try {
-                              System.out.println(login_url+"?username="+stuid+"&password="+password);
                               URL url=new URL(login_url+"?username="+stuid+"&password="+password);
                               HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
                               httpURLConnection.setRequestMethod("GET");
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                           try {
                               JSONObject jsline=new JSONObject(line);
                               String errcode=jsline.getString("errcode");
-                              System.out.println(errcode);
+//                              System.out.println(errcode);
                               if(errcode.equals("0")){
                                   return true;
                               }else{
@@ -154,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean parsestudentid(String stuid) {
         if(stuid.length()==10&&stuid.substring(3,5).equals("12")){
-            System.out.println("hahah");
             return true;
         }else{
             return false;
@@ -175,10 +175,8 @@ public class MainActivity extends AppCompatActivity {
                     in=https.getInputStream();
                     bfr=new BufferedReader(new InputStreamReader(in));
                     String line=bfr.readLine();
-                    System.out.println(line);
                     JSONObject js=new JSONObject(line);
                     if(js.getString("errcode").equals("0")) {
-                         Log.i("1","哈哈三大");
                         JSONObject js2 = js.getJSONObject("data");
                         student.setStudentid(js2.getString("studentid"));
                         student.setName(js2.getString("name"));

@@ -34,17 +34,7 @@ public class ChooseRoom extends AppCompatActivity {
         student= (Student) getIntent().getSerializableExtra("student");
         myinfolistview= (ListView) findViewById(R.id.mylist);
         btn_deal= (Button) findViewById(R.id.deal_with_mybus);
-        btn_deal.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN){
-                    v.setBackgroundColor(Color.rgb(211,121,121));
-                }else if(event.getAction()==MotionEvent.ACTION_UP){
-                    v.setBackgroundColor(Color.rgb(141,238,238));
-                }
-                return false;
-            }
-        });
+
         btn_deal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

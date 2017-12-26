@@ -70,17 +70,17 @@ public class multiPeople extends AppCompatActivity {
             }
         });
         btn= (Button) findViewById(R.id.forsure);
-        btn.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN){
-                    v.setBackgroundColor(Color.rgb(211,121,121));
-                }else if(event.getAction()==MotionEvent.ACTION_UP){
-                    v.setBackgroundColor(Color.rgb(141,238,238));
-                }
-                return false;
-            }
-        });
+//        btn.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if(event.getAction()==MotionEvent.ACTION_DOWN){
+//                    v.setBackgroundColor(Color.rgb(211,121,121));
+//                }else if(event.getAction()==MotionEvent.ACTION_UP){
+//                    v.setBackgroundColor(Color.rgb(141,238,238));
+//                }
+//                return false;
+//            }
+//        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
