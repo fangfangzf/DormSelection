@@ -48,6 +48,7 @@ public class multiPeople extends AppCompatActivity {
         }else{
             actionBar.setTitle("多人办理住宿");
         }
+        actionBar.hide();
         no= (TextView) findViewById(R.id.chooseno);
         name= (TextView) findViewById(R.id.choosename);
         sex= (TextView) findViewById(R.id.choosesex);
@@ -69,6 +70,7 @@ public class multiPeople extends AppCompatActivity {
                 showSingleChoiceDialog();
             }
         });
+
         btn= (Button) findViewById(R.id.forsure);
 //        btn.setOnTouchListener(new View.OnTouchListener() {
 //            @Override

@@ -29,6 +29,7 @@ public class ChooseRoom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chooseroom);
         ActionBar actionBar=getSupportActionBar();
+        actionBar.hide();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("办理住宿");
         student= (Student) getIntent().getSerializableExtra("student");

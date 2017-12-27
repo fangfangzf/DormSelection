@@ -3,6 +3,7 @@ package wangwn;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -70,18 +72,7 @@ public class MainActivity extends AppCompatActivity {
         login_btn= (Button) findViewById(R.id.my_login);
         my_stuid= (EditText) findViewById(R.id.accountEt);
         my_password= (EditText) findViewById(R.id.pwdEt);
-
-//        看这里
-        mActionBarView = findViewById(android.support.v7.appcompat.R.id.action_bar);
-        mContextView = findViewById(android.support.v7.appcompat.R.id.action_context_bar);
-        mActionBarView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Guide.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        actionBar.hide();
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,6 +139,25 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(MainActivity.this, "请输入账户或者密码！", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        TextView textView3= (TextView) findViewById(R.id.textView3);
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setAction(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:61273600"));
+                startActivity(intent);
+            }
+        });
+        TextView textView4= (TextView) findViewById(R.id.textView4);
+        textView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Guide.class);
+                startActivity(intent);
             }
         });
 

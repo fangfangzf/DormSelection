@@ -18,6 +18,7 @@ public class BacktoSuccessActivity extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("办理住宿成功");
+        actionBar.hide();
         btn= (Button) findViewById(R.id.back_shouye);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

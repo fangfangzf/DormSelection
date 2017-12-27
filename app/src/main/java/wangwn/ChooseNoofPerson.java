@@ -39,6 +39,7 @@ public class ChooseNoofPerson extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("办理住宿");
+        actionBar.hide();
         choosenoperson= (ListView) findViewById(R.id.deal_with_personno);
 
         mylist=new ArrayList();

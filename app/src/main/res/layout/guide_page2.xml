@@ -8,6 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="注意事项："
+        android:layout_marginVertical="15dp"
         android:textSize="35dp"/>
     <TextView
         android:id="@+id/girls"
@@ -16,10 +17,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="女生选宿舍时间："
+        android:layout_marginVertical="20dp"
         android:layout_alignParentLeft="true"
-        android:textColor="@color/colorWord"
-        android:background="@color/colorPrimary"
-        android:textSize="20dp"/>
+        android:textColor="#83000000"
+        android:textSize="25dp"/>
     <TextView
         android:id="@+id/girls_time_date"
         android:layout_below="@id/girls"
@@ -41,10 +42,10 @@
         android:layout_below="@id/girls_time"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
         android:text="   男生选宿舍时间："
-        android:textColor="@color/colorWord"
-        android:background="@color/colorPrimary"
-        android:textSize="20dp"/>
+        android:textColor="#83000000"
+        android:textSize="25dp"/>
     <TextView
         android:id="@+id/boys_time_date"
         android:layout_below="@id/boys"
@@ -68,9 +69,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="可选楼号："
-        android:textColor="@color/colorWord"
-        android:background="@color/colorPrimary"
-        android:textSize="20dp"/>
+        android:layout_marginVertical="20dp"
+        android:textColor="#83000000"
+        android:textSize="25dp"/>
     <TextView
         android:id="@+id/louhao"
         android:layout_below="@id/lou"

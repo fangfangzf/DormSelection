@@ -15,6 +15,7 @@ public class SuccessActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_success);
         ActionBar actionBar=getSupportActionBar();
+        actionBar.hide();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("分配宿舍信息");
         no= (TextView) findViewById(R.id.succhooseno);

@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="40dp"
     tools:context="wangwn.multiPeople">
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +16,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="wangchao.com.choosedormitory.SinglePerson">
+            tools:context="wangwn.SinglePerson">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -181,10 +182,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=">"
+                        android:text="                     点击以进行选择"
                         android:textSize="18sp"
-                        android:id="@+id/dorimtrynumber"
-                        android:layout_marginLeft="230dp"/>
+                        android:textColor="#43000000"
+                        android:id="@+id/dorimtrynumber"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -216,14 +217,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="学号               "
+                        android:text="学号           "
                         android:textSize="20sp"/>
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1701210001"
+                        android:hint="请输入同住人学号"
+                        android:textColor="#43000000"
                         android:textSize="18sp" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="校验码"
+                        android:textColor="#43000000"
+                        android:textSize="18sp" />
+
                 </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
@@ -237,12 +247,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="学号               "
+                        android:text="学号           "
                         android:textSize="20sp"/>
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1701210002"
+                        android:hint="请输入同住人学号"
+                        android:textColor="#43000000"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="校验码"
+                        android:textColor="#43000000"
                         android:textSize="18sp" />
                 </LinearLayout>
                 <View
@@ -258,12 +275,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="学号               "
+                        android:text="学号           "
                         android:textSize="20sp"/>
-                    <TextView
+                    <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1701210003"
+                        android:hint="请输入同住人学号"
+                        android:textColor="#43000000"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="校验码"
+                        android:textColor="#43000000"
                         android:textSize="18sp" />
 
                 </LinearLayout>
